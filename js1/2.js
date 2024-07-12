@@ -15,9 +15,11 @@ const solution = (num, fun) => {
   temp = 0
 
   return () => {
+    // returns null if the temporary value reaches the number's value
     if(temp >= num){
       return null
     }
+    // increments the temporary value until the number's value is reached; calls the closure 'num' times
     else{
         temp += 1 
         return fun()
